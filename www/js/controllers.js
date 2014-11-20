@@ -12,8 +12,13 @@ angular.module('starter.controllers', [])
     });
 })
 
-.controller('FriendDetailCtrl', function($scope, $stateParams, Friends) {
-  $scope.friend = Friends.get($stateParams.friendId);
+.controller('JobDetailCtrl', function($scope, $stateParams, JobService) {
+    JobService.getJob($stateParams.jobId).then(function(data) {
+      //this will execute when the
+      //AJAX call completes.
+      $scope.job = data;
+      console.log(data);
+    });
 })
 
 .controller('AccountCtrl', function($scope) {

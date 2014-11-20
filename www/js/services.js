@@ -15,6 +15,13 @@ angular.module('starter.services', [])
         //  console.log(result.data.rows);
         return result.data.rows;
       });
+    },
+    getJob: function(jobId) {
+      return $http.get('http://dgm3790.iriscouch.com/test_assignment_db/' + jobId)
+        .then(function(result) {
+          //console.log(result.data.data);
+          return result.data.data;
+        });
     }
   }
 });
