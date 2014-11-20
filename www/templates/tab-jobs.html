@@ -1,0 +1,9 @@
+<ion-view title="Jobs">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="title in titles" type="item-text-wrap" href="#/tab/jobs/{{title.key}}">
+        {{title.value}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
